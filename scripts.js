@@ -4,11 +4,9 @@ var closeButton = document.getElementById("closeButton");
 var mobileMenu = document.getElementById("mobileMenu");
 
 hamburgerButton.addEventListener("click", function () {
-  mobileMenu.style.display = "flex";
-  hamburgerButton.style.display = "none";
+  mobileMenu.classList.add("flex");
 });
 
 closeButton.addEventListener("click", function () {
-  mobileMenu.style.display = "none";
-  hamburgerButton.style.display = "block";
+  mobileMenu.classList.remove("flex");
 });
