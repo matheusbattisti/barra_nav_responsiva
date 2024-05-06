@@ -1,0 +1,152 @@
+/* styles.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/bg.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  height: 50px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links-desktop,
+.nav-links-mobile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links-desktop li,
+.nav-links-mobile li {
+  padding: 0 15px;
+}
+
+.nav-links-desktop a,
+.nav-links-mobile a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links-desktop a:hover,
+.nav-links-mobile a:hover {
+  color: #24c31c;
+}
+
+.hamburger,
+.close {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro semi-transparente */
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.nav-links-mobile {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  gap: 1.2rem;
+  width: 80%;
+}
+
+.nav-links-mobile li {
+  border-bottom: 1px solid #787272;
+  padding-bottom: 1.2rem;
+}
+
+.close {
+  margin-top: 20px;
+  margin-right: 20px;
+  display: block;
+  align-self: end;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: calc(100% - 70px);
+}
+
+.container h1 {
+  backdrop-filter: blur(10px);
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000;
+  padding: 2rem 0;
+}
+
+.container button {
+  border: 2px solid #24c31c;
+  color: #24c31c;
+  background-color: #fff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  transition: 0.4s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #24c31c;
+  color: #fff;
+}
