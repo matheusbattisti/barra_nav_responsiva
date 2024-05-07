@@ -1,7 +1,7 @@
-// script.js
-var hamburgerButton = document.getElementById("hamburgerButton");
-var closeButton = document.getElementById("closeButton");
-var mobileMenu = document.getElementById("mobileMenu");
+const hamburgerButton = document.querySelector("#hamburgerButton");
+const closeButton = document.querySelector("#closeButton");
+
+const mobileMenu = document.querySelector("#mobileMenu");
 
 hamburgerButton.addEventListener("click", function () {
   mobileMenu.classList.add("flex");
